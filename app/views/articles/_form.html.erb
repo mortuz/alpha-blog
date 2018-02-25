@@ -8,21 +8,30 @@
 <% end %>
 
 <%= form_for @article do |f| %>
-
-  <p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
-  </p>
+  <div class="form-group row mt-4">
+    <%= f.label :title, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :title, class: "form-control", placeholder: "Title of the article" %>
+    </div>
+  </div>
   
-  <p>
-    <%= f.label :description %> <br/>
-    <%= f.text_area :description %>
-  </p>
+  <div class="form-group row">
+    <%= f.label :description, class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-8">
+      <%= f.text_area :description, class: "form-control", rows: "10", placeholder: "Description of the article" %>
+    </div>
+  </div>
   
-  <%= f.submit %>
+  <div class="form-group row">
+    <div class="col-sm-8 offset-sm-2">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+  
+  
 
 <% end %>
 
 <p>
-  <%= link_to 'Back to article listing', articles_path %>  
+  <%= link_to '← Back to article listing', articles_path %>  
 </p>
