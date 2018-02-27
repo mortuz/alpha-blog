@@ -1,3 +1,6 @@
 <h1>Listing all articles</h1>
 
+
 <%= render 'articles', obj: @articles %>
+
+<%= will_paginate @clients, list_classes: %w(pagination justify-content-end) %>

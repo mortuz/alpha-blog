@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # BCrypt
 gem 'bcrypt', '~> 3.1.7'
+#will_paginate
+gem 'will_paginate-bootstrap4'
+#bootstrap-will_paginate
+# gem 'bootstrap-will_paginate'
 #Bootstrap 4
 gem 'bootstrap', '~> 4.0.0'
 # Use SCSS for stylesheets
