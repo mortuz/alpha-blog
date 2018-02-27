@@ -1,0 +1,9 @@
+<% @users.each do |user| %>
+  <div class="media">
+    <%= gravatar_for user, size: 50 %>
+    <div class="media-body">
+      <h5 class="mt-0"><%= link_to user.username, user_path(user) %></h5>
+      <%= pluralize(user.articles.count, "article") if user.articles %>
+    </div>
+  </div>
+<% end %>
