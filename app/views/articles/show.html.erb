@@ -7,10 +7,12 @@
 <p class="lead"><%= simple_format(@article.description) %></p>
 
 <hr>
-<p>
-  <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-xs btn-outline-info" %>
-  <%= link_to 'Delete', article_path(@article), class: "btn btn-xs btn-outline-danger", method: :delete, data: { confirm: "Are you sure you want to delete the article?" } %>
-</p>
+<% if logged_in? && @article.user %>
+  <p>
+    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-xs btn-outline-info" %>
+    <%= link_to 'Delete', article_path(@article), class: "btn btn-xs btn-outline-danger", method: :delete, data: { confirm: "Are you sure you want to delete the article?" } %>
+  </p>
+<% end %>
 
 <p>
   <%= link_to '← Back to article listing', articles_path %>  
