@@ -21,9 +21,13 @@ class MailerController < ApplicationController
                       }
     
     # Send your message through the client
-    result = mg_client.send_message 'idevia.in', message_params
+    result = mg_client.send_message('idevia.in', message_params).to_h!
     
-    flash[:success] = "Email has been send"
+    puts result
+    
+    if result
+      flash[:success] = "Email has been sent"
+    end
     
     render 'new'
 
