@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   
   delete '/logout', to: 'sessions#destroy'
   resources :articles
+  
+  get '/mailer', to: 'mailer#new'
+  post '/mailer', to: 'mailer#sendmail'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
