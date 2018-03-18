@@ -14,7 +14,7 @@ class MailerController < ApplicationController
     mg_client = Mailgun::Client.new 'key-9793adf968a4fb57cc6f619b58b98d4c'
     
     # Define your message parameters
-    message_params =  { from: 'Team iDevia <connect@idevia.in>',
+    message_params =  { from: 'Fidiyo App <app@fidiyo.com>',
                         to: email,
                         subject: subject,
                         text: message
